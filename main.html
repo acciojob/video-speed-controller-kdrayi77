@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Video Player</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="player">
     <!-- Video -->
-    <video class="viewer" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+    <video class="player__video" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
 
     <!-- Progress Bar -->
     <div class="progress">
@@ -19,14 +19,17 @@
     <!-- Controls -->
     <div class="player__controls">
       <button class="player__button toggle" title="Toggle Play">►</button>
+      <button class="player__button rewind" title="Rewind">⏪</button>
       <button data-skip="-10" class="player__button">« 10s</button>
       <button data-skip="25" class="player__button">25s »</button>
       
-      <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
-      <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
+      <label for="volume-slider">Volume</label>
+      <input type="range" id="volume-slider" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1" title="Adjust volume">
+      <label for="playbackRate-slider">Playback Rate</label>
+      <input type="range" id="playbackRate-slider" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1" title="Adjust playback rate">
     </div>
   </div>
 
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

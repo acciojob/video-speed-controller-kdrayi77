@@ -62,3 +62,10 @@ body {
   background: #3b82f6;
   flex-basis: 0%;
 }
+
+.player__video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
